@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Message</title>
+    <script type="text/javascript">
+        function showMessage() {
+            var password = document.getElementById("password").value;
+            var message = "Tips? Here it is\nEncryption Details:\nVigenère Cipher Key: ComplexKey\nCaesar Cipher Shift: 5\nXOR Operation Key: SecretPattern";
+            var correctPassword = "nARd";
+
+            if (password === correctPassword) {
+                document.getElementById("encryptedMessage").innerText = message;
+            } else {
+                alert("Incorrect password. Please try again.");
+                document.getElementById("encryptedMessage").innerText = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Password to View Encrypted Message</h2>
+    <input type="password" id="password" placeholder="Enter password"/>
+    <button onclick="showMessage()">Submit</button>
+    <p id="encryptedMessage"></p>
+</body>
+</html>
